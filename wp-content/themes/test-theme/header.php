@@ -11,5 +11,4 @@
 <body>
   
   <header>
-    Test header
   </header>
