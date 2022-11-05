@@ -1,0 +1,48 @@
+@import "variables";
+@import "fonts";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main,
+section {
+ overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+ text-decoration: none;
+  }
+  
+ul {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1112px;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1024px){
+    display: block;
+  }
+}
+
+.border {
+  max-width: 1120px;
+  margin: 93px 164px;
+  border: 1px solid $span-color;
+}
+
+.progress-file {
+  max-width: 224px;
+  max-height: 8px;
+  background-color: $bg-bord;
+}

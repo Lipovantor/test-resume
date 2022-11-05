@@ -1,0 +1,376 @@
+@import "variables";
+@import "fonts";
+@import "commons";
+
+
+//BACKGROUND BLOCK
+
+.background-block {
+  position: absolute;
+  width: 0;
+  min-height: 695px;
+  left: 0;
+  z-index: -1;
+  animation: backgroundBlockAnima .6s linear .1s forwards;
+  background-color: $bg-bord;
+  
+  @keyframes backgroundBlockAnima {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1024px){
+    background-color: $white-color;
+  }
+}
+
+  //LEFT-BLOCK
+
+.left-block {
+  max-width: 344px;
+  flex-basis: 42%;
+
+  @media screen and (max-width: 1024px){
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+.box {
+  writing-mode: vertical-rl;
+  transform: rotate(0.5turn);
+  margin-right: 164px;
+  margin-top: 150px;
+  margin-bottom: 136px;
+
+  @media screen and (max-width: 1024px){
+    transform: rotate(-90deg);
+    margin: 0 auto;
+    overflow-x: hidden;
+    text-align: center;
+  }
+
+  &__subtitle,
+  &__title,
+  &__name {
+      font-family: 'Bai';
+      font-weight: 700;
+      margin: 0;
+      color: $white-color;
+
+      @media screen and (max-width: 1024px){
+        color: $bl-color;
+      }
+  }
+
+  &__title {
+    font-size: 56px;
+    line-height: 64px;
+
+    @media screen and (max-width: 480px){
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  &__subtitle{
+    margin-bottom: 30px;
+    font-size: 80px;
+    line-height: 96px;
+    
+    @media screen and (max-width: 1024px){
+      margin: 10px;
+      font-size: 40px;
+      line-height: 16px;
+    }
+  }
+
+  &__name {
+      font-size: 24px;
+      line-height: 32px;
+  }
+}
+  
+  //SOCIAL
+
+.social {
+  padding: 24px;
+  margin-top: 88px;
+  margin-bottom: 192px;
+
+  svg {
+    margin-right: 8px;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    margin: 0 auto;
+    overflow-x: hidden;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: 'Bai';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+    margin-bottom: 16px;
+    color: $bl-color;
+
+    &:hover {
+      transform: rotateX(360deg);
+      transition: .9s;
+    }
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $bl-color;
+  }
+
+  &__link {
+    position: relative;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+
+    &:hover{
+      text-decoration: underline;
+      color: $bg-bord-hover;
+    }
+
+    @media screen and (max-width: 1024px) {
+      color: $bl-color;
+    }
+  }
+
+  &__instagram {
+    position: relative;
+    margin-bottom: 16px;
+
+    @media screen and (max-width: 1024px) {
+      margin: 0 auto;
+    }
+  }
+
+  &__ball {
+    position: relative;
+  }
+}
+    
+
+  //EDUCATION
+
+.education {
+  max-width: 248px;
+  margin-bottom: 104px;
+
+  @media screen and (max-width: 1024px) {
+    margin: 0 auto;
+  }
+
+  &__logo {
+    font-family: 'Bai';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+
+    &:hover {
+      transform: rotateX(360deg);
+      transition: .9s;
+    }
+  }
+
+  &__box {
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+      font-family: 'Inter';
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
+  }
+
+  &__subtitle {
+      font-family: 'Inter';
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+  }
+
+  &__years {
+      font-family: 'Inter';
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: $bg-bord;
+  }
+}
+  
+  //SKILLS
+
+  .skills {
+    max-width: 248px;
+    margin-top: 100px;
+
+    @media screen and (max-width: 1024px){
+      margin: 0 auto;
+    }
+  
+    &__logo {
+        font-family: 'Bai';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+
+        &:hover{
+          transform: rotateX(360deg);
+          transition: .9s;
+        }
+    }
+
+    &__box {
+        margin-bottom: 40px;
+
+        @media screen and (max-width: 1024px){
+          margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+    }
+}
+}
+
+
+//RIGHT-BLOCK
+
+.right-block {
+    max-width: 632px;
+    flex-basis: 62%;
+    padding: 115px 0 160px;
+
+    @media screen and (max-width: 1024px){
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  
+    &__title {
+      font-family: 'Inter';
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
+      color: $white-color;
+
+      @media screen and (max-width: 1024px){
+        color: $bl-color;
+      }
+    }
+  
+    &__img {
+        margin-bottom: 192px;
+         width: calc(632px + (632 - 300) * (100vw - 1920px) / (1920 - 320));
+
+        @media screen and (max-width: 1024px){
+          width: 100%;
+          justify-content: space-between;
+        }
+    }
+
+    &__experience {
+        font-family: 'Bai';
+        font-size: 24px;
+        line-height: 32px;
+        color: $bl-color;
+
+        &:hover{
+          transform: rotateX(360deg);
+          transition: .9s;
+        }
+
+        @media screen and (max-width: 1024px){
+          margin: 0 auto;
+          text-align: center;
+        }
+    }
+
+
+.info {
+    background-color: $info-color;
+    margin-bottom: 24px;
+
+    &__item {
+        padding: 40px 40px;
+    }
+
+    &__present {
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 8px;
+        color: $info-present;
+    }
+
+    &__title {
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 8px;
+        color: $bl-color;
+
+    }
+
+    &__text {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $info-text;
+
+        &_bottom {
+            margin-top: 8px;
+            font-family: 'Inter';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: $info-text;
+        }
+    }
+  }
+}
+
+//SLIDER
+
+// .slider {
+
+//   &__item {
+
+//     &.slick-center {
+//       border: 3px solid red;
+//     }
+//   }
+// }
