@@ -12,7 +12,7 @@
   left: 0;
   z-index: -1;
   animation: backgroundBlockAnima .6s linear .1s forwards;
-  background-color: $bg-bord;
+  // background-color: $bg-bord;
   
   @keyframes backgroundBlockAnima {
     0% {
@@ -44,7 +44,7 @@
 
 .box {
   writing-mode: vertical-rl;
-  transform: rotate(0.5turn);
+  transform: rotate(.5turn);
   margin-right: 164px;
   margin-top: 150px;
   margin-bottom: 136px;
@@ -63,6 +63,7 @@
       font-weight: 700;
       margin: 0;
       color: $white-color;
+      text-transform: uppercase;
 
       @media screen and (max-width: 1024px){
         color: $bl-color;
@@ -154,6 +155,12 @@
     @media screen and (max-width: 1024px) {
       color: $bl-color;
     }
+  }
+
+  &__img {
+    max-width: 24px;
+    max-height: 24px;
+    margin-right: 8px;
   }
 
   &__instagram {
