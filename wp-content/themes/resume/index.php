@@ -18,7 +18,13 @@ get_header();
 $leftSide = get_field('left_side');
 $rightSide = get_field('right_side');
 $rightSide = get_field('right_side');
+
 $social = get_field('social');
+
+$education = get_field('education');
+$educationGroup1 = get_field('education_group_1');
+$educationGroup2 = get_field('education_group_2');
+$educationGroup3 = get_field('education_group_3');
 ?>
 
 <main class="home">
@@ -43,30 +49,58 @@ $social = get_field('social');
       </div>
 
       <div class="education" data-aos="fade-right" data-aos-delay="50">
-        <h2 class="education__logo">Education</h2>
-        <div class="education__box">
-          <h3 class="education__title">Degree title here</h3>
-          <p class="education__subtitle">Description</p>
-          <span class="education__years">2020-2022</span>
-        </div>
-        <div class="education__box">
-          <h3 class="education__title">Degree title here</h3>
-          <p class="education__subtitle">Description</p>
-          <span class="education__years">2020-2022</span>
-        </div>
+        <h2 class="education__logo"><?php echo get_field('education_title') ?></h2>
+        <?php if($educationGroup1['name'] && $educationGroup1['description'] && $educationGroup1['years']) { ?>
+          <div class="education__box">
+            <h3 class="education__title"><?php echo $educationGroup1['name'] ?></h3>
+            <p class="education__subtitle"><?php echo $educationGroup1['description'] ?></p>
+            <span class="education__years"><?php echo $educationGroup1['years'] ?></span>
+          </div>
+        <?php } ?>
+        <?php if($educationGroup2['name'] && $educationGroup2['description'] && $educationGroup2['years']) { ?>
+          <div class="education__box">
+            <h3 class="education__title"><?php echo $educationGroup2['name'] ?></h3>
+            <p class="education__subtitle"><?php echo $educationGroup2['description'] ?></p>
+            <span class="education__years"><?php echo $educationGroup2['years'] ?></span>
+          </div>
+        <?php } ?>
+        <?php if($educationGroup3['name'] && $educationGroup3['description'] && $educationGroup3['years']) { ?>
+          <div class="education__box">
+            <h3 class="education__title"><?php echo $educationGroup3['name'] ?></h3>
+            <p class="education__subtitle"><?php echo $educationGroup3['description'] ?></p>
+            <span class="education__years"><?php echo $educationGroup3['years'] ?></span>
+          </div>
+        <?php } ?>
       </div>
 
+      <?php 
+      $skills = get_field('skills');
+
+      $skillsGroup1 = get_field('skills_group_1');
+      $skillsGroup2 = get_field('skills_group_2');
+      $skillsGroup3 = get_field('skills_group_3');
+      $skillsGroup4 = get_field('skills_group_4');
+      ?>
+
       <div class="skills" data-aos="fade-right" data-aos-delay="200">
-        <h2 class="skills__logo">Skills</h2>
+        <h2 class="skills__logo"><?php echo get_field('skills_title') ?></h2>
         <div class="skills__box">
-          <h3 class="skills__title">Photo Editing</h3>
-          <progress class="progress-file" id="file" max="100" value="90"> 90% </progress>
-          <h3 class="skills__title">Illustration</h3>
-          <progress class="progress-file" id="file" max="100" value="60"> 60% </progress>
-          <h3 class="skills__title">UX Design</h3>
-          <progress class="progress-file" id="file" max="100" value="90"> 90% </progress>
-          <h3 class="skills__title">Wireframing</h3>
-          <progress class="progress-file" id="file" max="100" value="40"> 40% </progress>
+          <?php if($skillsGroup1['title']) { ?>
+            <h3 class="skills__title"><?php echo $skillsGroup1['title'] ?></h3>
+            <progress class="progress-file" id="file" max="100" value="<?php echo $skillsGroup1['progress'] ?>"><?php echo $skillsGroup1['progress'] ?>%</progress>
+          <?php } ?>
+          <?php if($skillsGroup2['title']) { ?>
+            <h3 class="skills__title"><?php echo $skillsGroup2['title'] ?></h3>
+            <progress class="progress-file" id="file" max="100" value="<?php echo $skillsGroup2['progress'] ?>"><?php echo $skillsGroup2['progress'] ?>%</progress>
+          <?php } ?>
+          <?php if($skillsGroup3['title']) { ?>
+            <h3 class="skills__title"><?php echo $skillsGroup3['title'] ?></h3>
+            <progress class="progress-file" id="file" max="100" value="<?php echo $skillsGroup3['progress'] ?>"><?php echo $skillsGroup3['progress'] ?>%</progress>
+          <?php } ?>
+          <?php if($skillsGroup4['title']) { ?>
+            <h3 class="skills__title"><?php echo $skillsGroup4['title'] ?></h3>
+            <progress class="progress-file" id="file" max="100" value="<?php echo $skillsGroup4['progress'] ?>"><?php echo $skillsGroup4['progress'] ?>%</progress>
+          <?php } ?>
         </div>
       </div>
 
@@ -108,7 +142,7 @@ $social = get_field('social');
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
               laboris nisi ut aliquip ex ea commodo consequat.</li>
         </ul>
-      </div> 
+      </div>
   </section>
   </div>
 </main>
