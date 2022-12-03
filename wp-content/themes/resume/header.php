@@ -10,4 +10,10 @@
 </head>
 <body>
 
-<header></header>
+<header>
+    <?php
+    wp_nav_menu([
+        'container'       => 'div',
+        'container_class' => 'container',
+    ]) ?>
+</header>
